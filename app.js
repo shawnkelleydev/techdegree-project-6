@@ -8,7 +8,7 @@ const app = express();
 app.set("view engine", "pug");
 
 //serves static files to be read by user's browser
-app.use(express.static("public"));
+app.use("static", express.static("/public"));
 
 /* =======
 
@@ -20,7 +20,6 @@ app.use(express.static("public"));
 
 app.get("/", (req, res) => {
   res.render("index");
-  res.locals = data.projects;
 });
 
 app.get("/about", (req, res) => {
@@ -34,6 +33,7 @@ app.get("/projects", (req, res) => {
 app.get("/projects/:id", (req, res) => {
   const { id } = req.params;
   const project = data.projects[id];
+  console.log(project);
   res.render("project", project);
 });
 
