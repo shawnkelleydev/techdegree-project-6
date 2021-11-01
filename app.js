@@ -8,7 +8,7 @@ const app = express();
 app.set("view engine", "pug");
 
 //serves static files to be read by user's browser
-app.use("static", express.static("/public"));
+app.use("/static", express.static("public"));
 
 /* =======
 
@@ -43,6 +43,8 @@ app.get("/projects/:id", (req, res) => {
 
 ======= */
 
-app.listen(3000, () => {
-  console.log("The application is running on localhost:3000.");
+const route = 3000;
+
+app.listen(route, () => {
+  console.log(`The application is running on localhost:${route}.`);
 });
