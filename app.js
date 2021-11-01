@@ -9,7 +9,6 @@ app.set("view engine", "pug");
 
 //serves static files to be read by user's browser
 app.use("/static", express.static("public"));
-
 /* =======
 
   ROUTES
@@ -19,6 +18,7 @@ app.use("/static", express.static("public"));
 //app.get("/", (req, res) => {});
 
 app.get("/", (req, res) => {
+  res.locals.projects = data.projects;
   res.render("index");
 });
 
@@ -33,8 +33,14 @@ app.get("/projects", (req, res) => {
 app.get("/projects/:id", (req, res) => {
   const { id } = req.params;
   const project = data.projects[id];
-  console.log(project);
-  res.render("project", project);
+  res.locals.title = project.project_name;
+  res.locals.description = project.description;
+  res.locals.techs = project.technologies;
+  res.locals.live = project.live_link;
+  res.locals.github = project.github_link;
+  res.locals.img = project.image_urls;
+  res.locals.alts = project.image_alts;
+  res.render("project");
 });
 
 /* =======
