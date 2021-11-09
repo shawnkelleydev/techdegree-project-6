@@ -1,4 +1,3 @@
-const { response } = require("express");
 const express = require("express");
 const data = require("./data.json");
 
@@ -10,6 +9,7 @@ app.set("view engine", "pug");
 
 //serves static files to be read by user's browser
 app.use("/static", express.static("public"));
+
 /* =======
 
   ROUTES
