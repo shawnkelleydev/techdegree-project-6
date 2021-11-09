@@ -1,3 +1,4 @@
+const { response } = require("express");
 const express = require("express");
 const data = require("./data.json");
 
@@ -30,7 +31,7 @@ app.get("/projects", (req, res) => {
   res.render("project");
 });
 
-app.get("/projects/:id", (req, res) => {
+app.get("/projects/:id", (req, res, next) => {
   const { id } = req.params;
   const project = data.projects[id];
   res.locals.title = project.project_name;
@@ -41,6 +42,23 @@ app.get("/projects/:id", (req, res) => {
   res.locals.img = project.image_urls;
   res.locals.alts = project.image_alts;
   res.render("project");
+});
+
+app.use((req, res, next) => {
+  const err = new Error("This is not the page you're looking for.");
+  err.status = 404;
+  next(err);
+});
+
+app.use((err, req, res, next) => {
+  res.locals.err = err;
+  if (err.status === 404) {
+    res.render("page-not-found");
+    console.log("404 - please try again.");
+  } else if (err.status === undefined) {
+    res.render("error");
+    console.log("Bad things just happened.  Please try again.");
+  }
 });
 
 /* =======
