@@ -16,21 +16,23 @@ app.use("/static", express.static("public"));
 
 ======= */
 
-//app.get("/", (req, res) => {});
-
+//home page
 app.get("/", (req, res) => {
   res.locals.projects = data.projects;
   res.render("index");
 });
 
+//about page
 app.get("/about", (req, res) => {
   res.render("about");
 });
 
+//projects base
 app.get("/projects", (req, res) => {
   res.render("project");
 });
 
+//projects by id
 app.get("/projects/:id", (req, res, next) => {
   const { id } = req.params;
   const project = data.projects[id];
@@ -44,12 +46,14 @@ app.get("/projects/:id", (req, res, next) => {
   res.render("project");
 });
 
+//error object generator
 app.use((req, res, next) => {
   const err = new Error("This is not the page you're looking for.");
   err.status = 404;
   next(err);
 });
 
+//error page router
 app.use((err, req, res, next) => {
   res.locals.err = err;
   if (err.status === 404) {
