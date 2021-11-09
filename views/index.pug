@@ -8,9 +8,9 @@ block content
     h1 Hey, Potential Employers
 
     //- Replace with a description for your portfolio, what this project is, it's purpose, what it's supposed to accomplish, etc. 
-    p This website is intended to demonstrate competency with Node.js and Express.
+    p This website is a Team Treehouse project intended to demonstrate my competency with Node.js, Express, and Pug (formerly Jade).
     p Please visit my official portfolio page for more information about me.
-    a(href="http://shawnkelley.art" target="_blank") Official Portfolio
+    a(href="https://shawnkelleyws.herokuapp.com" target="_blank") Official Portfolio
 
   article.portfolio-project-thumbs
     .projects-box.box.grid
@@ -24,6 +24,6 @@ block content
 
         .cell
           a(href= `/projects/${project.id}`)
-            img.thumbnail(src= project.image_urls[0] alt= "")
+            img.thumbnail(src= project.image_urls[0] alt= `Thumbnail ${project.project_name}`)
             h5= project.project_name
 
