@@ -8,13 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shawnkelleyart/techdegree-project-6.git"
+    "url": "https://github.com/shawnkelleyart/techdegree-project-6.git"
   },
   "keywords": [
     "shawn",
     "kelley",
     "javascript",
-    "portfolio"
+    "portfolio",
+    "team treehouse project"
   ],
   "author": "Shawn Kelley",
   "license": "ISC",
