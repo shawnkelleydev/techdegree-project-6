@@ -46,7 +46,7 @@ app.get("/projects/:id", (req, res, next) => {
   res.render("project");
 });
 
-//error object generator
+// 404 object generator
 app.use((req, res, next) => {
   const err = new Error("This is not the page you're looking for.");
   err.status = 404;
@@ -55,13 +55,16 @@ app.use((req, res, next) => {
 
 //error page router
 app.use((err, req, res, next) => {
-  res.locals.err = err;
   if (err.status === 404) {
-    res.render("page-not-found");
+    res.locals.err = err;
     console.log("404 - please try again.");
-  } else if (err.status === undefined) {
-    res.render("error");
+    res.render("page-not-found");
+  } else {
+    const err500 = new Error("These are not the ways of the Jedi.");
+    err500.status = 500;
     console.log("Bad things just happened.  Please try again.");
+    res.locals.err = err500;
+    res.render("error");
   }
 });
 

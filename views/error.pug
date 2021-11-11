@@ -11,6 +11,6 @@ block content
     .inner-wrapper.flex-row-wrap.two-col
       .about-intro-box.box
 
-        h1 Your ways are not the ways of the Jedi.
+        h1= err.message
         img(src="/static/img/obiwan.jpg").myimg
-        h2 Please go back and try again.
+        h2= err.status
