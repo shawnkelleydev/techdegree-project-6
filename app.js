@@ -74,8 +74,7 @@ app.use((err, req, res, next) => {
 
 ======= */
 
-const route = 3000;
-
-app.listen(route, () => {
-  console.log(`The application is running on localhost:${route}.`);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Our app is running on port ${PORT}`);
 });
