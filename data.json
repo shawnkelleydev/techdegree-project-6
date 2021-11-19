@@ -5,8 +5,8 @@
       "project_name": "Random Quotes",
       "description": "JavaScript-selected quotes over a JavaScript-selected background color, refreshing every 7 seconds.",
       "technologies": ["HTML", "CSS", "JavaScript"],
-      "live_link": "https://shawnkelleyart.github.io/techdegree-project-1/",
-      "github_link": "https://github.com/shawnkelleyart/techdegree-project-1",
+      "live_link": "https://shawnkelleydev.github.io/techdegree-project-1/",
+      "github_link": "https://github.com/shawnkelleydev/techdegree-project-1",
       "image_urls": [
         "/static/img/project-1/green_king.png",
         "/static/img/project-1/purple_einstein.png",
@@ -14,7 +14,7 @@
         "/static/img/project-1/red_king.png"
       ],
       "image_alts": [
-        "Quote from Martin Luther King, Jr. over green background",
+        "Quote from Mdevin Luther King, Jr. over green background",
         "Quote from Alber Einstein over pinkish-purple background",
         "Quote from Abraham Lincoln over bluish-purple background"
       ]
@@ -24,8 +24,8 @@
       "project_name": "Student List Pagination",
       "description": "Population, pagination, and search of a list of students.",
       "technologies": ["HTML", "CSS", "JavaScript"],
-      "live_link": "https://shawnkelleyart.github.io/techdegree-project-2/",
-      "github_link": "https://github.com/shawnkelleyart/techdegree-project-2",
+      "live_link": "https://shawnkelleydev.github.io/techdegree-project-2/",
+      "github_link": "https://github.com/shawnkelleydev/techdegree-project-2",
       "image_urls": [
         "/static/img/project-2/search.png",
         "/static/img/project-2/full.png"
@@ -40,8 +40,8 @@
       "project_name": "Responsive Form with Live Validation",
       "description": "This form uses regular expressions to validate user input live.  It also prevents users from registering for conflicting events.",
       "technologies": ["RegEx", "HTML", "CSS", "JavaScript"],
-      "live_link": "https://shawnkelleyart.github.io/techdegree-project-3/",
-      "github_link": "https://github.com/shawnkelleyart/techdegree-project-3",
+      "live_link": "https://shawnkelleydev.github.io/techdegree-project-3/",
+      "github_link": "https://github.com/shawnkelleydev/techdegree-project-3",
       "image_urls": [
         "/static/img/project-3/email.png",
         "/static/img/project-3/activities_payment.png",
@@ -62,8 +62,8 @@
       "project_name": "Phrase Hunter",
       "description": "A responsive phrase-hunting game with keyboard functionality.  Created with object-oriened programming in JavaScript.",
       "technologies": ["HTML", "CSS", "JavaScript"],
-      "live_link": "https://shawnkelleyart.github.io/techdegree-project-4/",
-      "github_link": "https://github.com/shawnkelleyart/techdegree-project-4",
+      "live_link": "https://shawnkelleydev.github.io/techdegree-project-4/",
+      "github_link": "https://github.com/shawnkelleydev/techdegree-project-4",
       "image_urls": [
         "/static/img/project-4/title.png",
         "/static/img/project-4/action.png",
@@ -80,8 +80,8 @@
       "project_name": "API Employee Directory",
       "description": "An API project with a gallery, search functionality, modals, and modal navigation.",
       "technologies": ["HTML", "CSS", "JavaScript"],
-      "live_link": "https://shawnkelleyart.github.io/techdegree-project-5/",
-      "github_link": "https://github.com/shawnkelleyart/techdegree-project-5",
+      "live_link": "https://shawnkelleydev.github.io/techdegree-project-5/",
+      "github_link": "https://github.com/shawnkelleydev/techdegree-project-5",
       "image_urls": [
         "/static/img/project-5/search.png",
         "/static/img/project-5/full.png",
